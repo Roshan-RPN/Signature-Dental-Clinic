@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Dentistry Kochi | Premium Dental Care | Dr. Afeef Ansar</title>
+    <meta name="description" content="Signature Dentistry Kochi - Premium dental clinic led by Dr. Afeef Ansar (BDS, MDS). Specialists in aligners, root canals, crowns, veneers & cosmetic dentistry. Book your appointment today.">
+    <meta name="keywords" content="best dentist Kochi, dental clinic Kaloor, root canal treatment Kochi, invisible aligners Kerala, cosmetic dentistry Kochi, Dr Afeef Ansar, Signature Dentistry">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --primary-light: #2e86c1;
+            --accent: #d4af37;
+            --accent-light: #f4d03f;
+            --dark: #1a252f;
+            --text: #2c3e50;
+            --text-light: #5d6d7e;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --success: #27ae60;
+            --shadow: 0 10px 40px rgba(0,0,0,0.08);
+            --shadow-lg: 0 25px 60px rgba(0,0,0,0.12);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 600; line-height: 1.2; }
+
+        /* ===== LOADER ===== */
+        .loader {
+            position: fixed; inset: 0; background: var(--white); z-index: 9999;
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .loader.hidden { opacity: 0; visibility: hidden; }
+        .loader-ring {
+            width: 60px; height: 60px;
+            border: 3px solid var(--bg-light);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ===== HEADER ===== */
+        .top-bar {
+            background: var(--dark);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 13px;
+        }
+        .top-bar .container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .top-bar a { color: var(--accent-light); text-decoration: none; transition: var(--transition); }
+        .top-bar a:hover { color: var(--white); }
+        .top-bar i { margin-right: 6px; color: var(--accent); }
+
+        header {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        header.scrolled { box-shadow: var(--shadow); }
+        header .container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            height: 80px;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-icon {
+            width: 48px; height: 48px; background: var(--primary);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 22px;
+        }
+        .logo-text h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px; color: var(--dark); letter-spacing: 1px;
+        }
+        .logo-text span {
+            font-size: 10px; color: var(--text-light); text-transform: uppercase;
+            letter-spacing: 3px; font-weight: 600;
+        }
+        nav { display: flex; align-items: center; gap: 32px; }
+        nav a {
+            text-decoration: none; color: var(--text); font-size: 14px;
+            font-weight: 500; text-transform: uppercase; letter-spacing: 1px;
+            position: relative; transition: var(--transition);
+        }
+        nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 2px; background: var(--accent);
+            transition: var(--transition);
+        }
+        nav a:hover { color: var(--primary); }
+        nav a:hover::after { width: 100%; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; border-radius: 8px; font-size: 14px;
+            font-weight: 600; text-decoration: none; text-transform: uppercase;
+            letter-spacing: 1px; cursor: pointer; border: none; transition: var(--transition);
+        }
+        .btn-primary {
+            background: var(--primary); color: var(--white);
+            box-shadow: 0 4px 15px rgba(26,82,118,0.3);
+        }
+        .btn-primary:hover {
+            background: var(--dark); transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(26,82,118,0.4);
+        }
+        .btn-accent {
+            background: var(--accent); color: var(--white);
+            box-shadow: 0 4px 15px rgba(212,175,55,0.3);
+        }
+        .btn-accent:hover {
+            background: var(--accent-light); transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: transparent; color: var(--white);
+            border: 2px solid var(--white);
+        }
+        .btn-outline:hover {
+            background: var(--white); color: var(--primary);
+        }
+        .mobile-menu { display: none; font-size: 24px; cursor: pointer; }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, #154360 100%);
+            position: relative; overflow: hidden;
+            display: flex; align-items: center;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+        .hero-shapes {
+            position: absolute; inset: 0; overflow: hidden;
+        }
+        .shape {
+            position: absolute; border-radius: 50%;
+            background: rgba(26,82,118,0.03); animation: float 8s ease-in-out infinite;
+        }
+        .shape-1 { width: 600px; height: 600px; top: -10%; right: -10%; animation-delay: 0s; }
+        .shape-2 { width: 400px; height: 400px; bottom: -5%; left: -5%; animation-delay: -2s; }
+        .shape-3 { width: 300px; height: 300px; top: 40%; right: 20%; animation-delay: -4s; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        .hero .container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center; position: relative; z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(212,175,55,0.15); color: var(--accent-light);
+            padding: 8px 20px; border-radius: 50px; font-size: 13px;
+            font-weight: 500; text-transform: uppercase; letter-spacing: 1px;
+            border: 1px solid rgba(212,175,55,0.3); margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 64px);
+            color: var(--white); margin-bottom: 20px;
+            font-weight: 700; line-height: 1.1;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero p {
+            font-size: 18px; color: rgba(255,255,255,0.8);
+            margin-bottom: 32px; max-width: 480px; line-height: 1.8;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .hero-rating {
+            display: flex; align-items: center; gap: 16px; margin-top: 40px;
+        }
+        .hero-rating .stars { color: var(--accent); font-size: 18px; }
+        .hero-rating span { color: rgba(255,255,255,0.7); font-size: 14px; }
+        .hero-image {
+            position: relative; display: flex; justify-content: center;
+        }
+        .hero-image-main {
+            width: 100%; max-width: 500px; aspect-ratio: 1;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: linear-gradient(135deg, rgba(26,82,118,0.1), rgba(26,82,118,0.05));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26,82,118,0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 120px; color: rgba(255,255,255,0.15);
+            animation: morph 8s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        }
+        .hero-float-card {
+            position: absolute; background: var(--white);
+            padding: 16px 20px; border-radius: 16px;
+            box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px;
+            animation: floatCard 6s ease-in-out infinite;
+        }
+        .hero-float-card.card-1 { top: 10%; left: -20px; animation-delay: 0s; }
+        .hero-float-card.card-2 { bottom: 15%; right: -10px; animation-delay: -3s; }
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .hero-float-card i { font-size: 24px; color: var(--primary); }
+        .hero-float-card div h4 { font-size: 14px; color: var(--dark); }
+        .hero-float-card div p { font-size: 12px; color: var(--text-light); margin: 0; }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--white); padding: 40px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .trust-bar .container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
+        }
+        .trust-item {
+            text-align: center; padding: 20px;
+            border-right: 1px solid rgba(0,0,0,0.05);
+        }
+        .trust-item:last-child { border-right: none; }
+        .trust-item i {
+            font-size: 32px; color: var(--primary); margin-bottom: 12px;
+            display: block;
+        }
+        .trust-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px; color: var(--dark); margin-bottom: 4px;
+        }
+        .trust-item p { font-size: 14px; color: var(--text-light); }
+
+        /* ===== SECTION HEADING ===== */
+        .section-heading {
+            text-align: center; margin-bottom: 60px;
+        }
+        .section-heading h2 {
+            font-size: clamp(28px, 4vw, 42px);
+            color: var(--dark); margin-bottom: 16px;
+        }
+        .section-heading p {
+            font-size: 16px; color: var(--text-light); max-width: 600px;
+            margin: 0 auto;
+        }
+        .section-heading .line {
+            width: 60px; height: 3px; background: var(--accent);
+            margin: 20px auto 0;
+        }
+
+        /* ===== ABOUT ===== */
+        .about { padding: 100px 0; background: var(--bg-light); }
+        .about .container {
+            max-width: 1200px; margin: 0 auto; padding: 0 20px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+        }
+        .about-image-main {
+            width: 100%; max-width: 450px; aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 20px; display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 80px;
+            box-shadow: var(--shadow-lg); position: relative; z-index: 1;
+        }
+        .about-image::before {
+            content: ''; position: absolute; top: 30px; left: 30px;
+            width: 100%; height: 100%; border: 3px solid var(--accent);
+            border-radius: 20px; z-index: 0;
+        }
+        .about-content h3 {
+            font-size: 14px; color: var(--primary);
+            text-transform: uppercase; letter-spacing: 3px; margin-bottom: 16px;
+        }
+        .about-content h2 { font-size: 36px; color: var(--dark); margin-bottom: 20px; }
+        .about-content p { color: var(--text-light); margin-bottom: 20px; }
+        .about-features { display: flex; flex-direction: column; gap: 16px; margin: 30px 0; }
+        .about-feature {
+            display: flex; align-items: center; gap: 12px;
+        }
+        .about-feature i {
+            width: 36px; height: 36px; background: rgba(26,82,118,0.1);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: var(--primary); font-size: 14px;
+        }
+        .about-feature span { font-size: 15px; color: var(--text); font-weight: 500; }
+
+        /* ===== DOCTORS ===== */
+        .doctors { padding: 100px 0; background: var(--white); }
+        .doctors .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .doctors-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+        }
+        .doctor-card {
+            background: var(--white); border-radius: 20px;
+            overflow: hidden; box-shadow: var(--shadow);
+            transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);
+        }
+        .doctor-card:hover {
+            transform: translateY(-8px); box-shadow: var(--shadow-lg);
+        }
+        .doctor-image {
+            height: 280px; background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 60px; position: relative;
+        }
+        .doctor-image img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+        }
+        .doctor-badge {
+            position: absolute; bottom: -15px; right: 20px;
+            background: var(--accent); color: var(--dark);
+            padding: 8px 16px; border-radius: 8px; font-size: 12px;
+            font-weight: 700; text-transform: uppercase;
+        }
+        .doctor-info { padding: 30px 24px 24px; }
+        .doctor-info h3 { font-size: 22px; color: var(--dark); margin-bottom: 4px; }
+        .doctor-info .role {
+            font-size: 13px; color: var(--primary); font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;
+        }
+        .doctor-info p { font-size: 14px; color: var(--text-light); margin-bottom: 16px; }
+        .doctor-meta { display: flex; gap: 16px; }
+        .doctor-meta span {
+            font-size: 12px; color: var(--text-light);
+            display: flex; align-items: center; gap: 4px;
+        }
+        .doctor-meta span i { color: var(--accent); }
+
+        /* ===== SERVICES ===== */
+        .services { padding: 100px 0; background: var(--bg-light); }
+        .services .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .service-card {
+            background: var(--white); padding: 40px 30px; border-radius: 16px;
+            box-shadow: var(--shadow); transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03); position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 4px; background: var(--primary);
+            transform: scaleX(0); transform-origin: left;
+            transition: var(--transition);
+        }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-card:hover {
+            transform: translateY(-4px); box-shadow: var(--shadow-lg);
+        }
+        .service-card i {
+            width: 56px; height: 56px; background: rgba(26,82,118,0.08);
+            border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            font-size: 24px; color: var(--primary); margin-bottom: 20px;
+        }
+        .service-card h3 { font-size: 20px; color: var(--dark); margin-bottom: 12px; }
+        .service-card p { font-size: 14px; color: var(--text-light); }
+
+        /* ===== WHY CHOOSE ===== */
+        .why-choose { padding: 100px 0; background: var(--white); }
+        .why-choose .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .why-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;
+        }
+        .why-item {
+            display: flex; gap: 20px; padding: 30px;
+            background: var(--bg-light); border-radius: 16px;
+            transition: var(--transition);
+        }
+        .why-item:hover { background: var(--white); box-shadow: var(--shadow); }
+        .why-item i {
+            width: 50px; height: 50px; background: var(--primary);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 20px; flex-shrink: 0;
+        }
+        .why-item h3 { font-size: 18px; color: var(--dark); margin-bottom: 8px; }
+        .why-item p { font-size: 14px; color: var(--text-light); }
+
+        /* ===== GALLERY ===== */
+        .gallery { padding: 100px 0; background: var(--white); border-top: 1px solid rgba(0,0,0,0.05); }
+        .gallery .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+        }
+        .gallery-item {
+            border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);
+            aspect-ratio: 4/3; position: relative;
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover; transition: var(--transition);
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+        
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials { padding: 100px 0; background: linear-gradient(135deg, var(--dark), var(--primary)); position: relative; overflow: hidden; }
+        .testimonials::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%231a5276' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .testimonials .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+        .testimonials .section-heading h2 { color: var(--white); }
+        .testimonials .section-heading p { color: rgba(255,255,255,0.7); }
+        .testimonial-carousel { position: relative; overflow: hidden; }
+        .testimonial-track {
+            display: flex; gap: 24px;
+            transition: transform 0.5s ease;
+        }
+        .testimonial-card {
+            min-width: calc(50% - 12px); background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px; padding: 40px;
+            transition: var(--transition);
+        }
+        .testimonial-card:hover { background: rgba(255,255,255,0.12); }
+        .testimonial-stars { color: var(--accent); font-size: 16px; margin-bottom: 20px; }
+        .testimonial-card p {
+            font-size: 16px; color: rgba(255,255,255,0.9); line-height: 1.8;
+            margin-bottom: 24px; font-style: italic;
+        }
+        .testimonial-author { display: flex; align-items: center; gap: 16px; }
+        .testimonial-author-avatar {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: var(--accent); display: flex; align-items: center; justify-content: center;
+            color: var(--dark); font-weight: 700; font-size: 18px;
+        }
+        .testimonial-author h4 { color: var(--white); font-size: 16px; margin-bottom: 2px; }
+        .testimonial-author span { color: rgba(255,255,255,0.6); font-size: 13px; }
+        .testimonial-nav {
+            display: flex; justify-content: center; gap: 12px; margin-top: 40px;
+        }
+        .testimonial-nav button {
+            width: 48px; height: 48px; border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2); background: transparent;
+            color: var(--white); font-size: 16px; cursor: pointer;
+            transition: var(--transition); display: flex; align-items: center; justify-content: center;
+        }
+        .testimonial-nav button:hover {
+            background: var(--accent); color: var(--dark); border-color: var(--accent);
+        }
+        .testimonial-dots { display: flex; gap: 8px; }
+        .testimonial-dot {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: rgba(255,255,255,0.3); cursor: pointer; transition: var(--transition);
+        }
+        .testimonial-dot.active { background: var(--accent); width: 30px; border-radius: 5px; }
+
+        /* ===== FAQ ===== */
+        .faq { padding: 100px 0; background: var(--bg-light); }
+        .faq .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        .faq-item {
+            background: var(--white); border-radius: 12px;
+            margin-bottom: 16px; overflow: hidden;
+            box-shadow: var(--shadow); border: 1px solid rgba(0,0,0,0.03);
+        }
+        .faq-question {
+            padding: 24px 30px; display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; transition: var(--transition);
+        }
+        .faq-question h3 { font-size: 16px; color: var(--dark); font-weight: 600; }
+        .faq-question i { color: var(--primary); font-size: 14px; transition: var(--transition); }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 30px;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px; padding: 0 30px 24px;
+        }
+        .faq-answer p { color: var(--text-light); font-size: 15px; line-height: 1.8; }
+
+        /* ===== CONTACT ===== */
+        .contact { padding: 100px 0; background: var(--white); }
+        .contact .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+        }
+        .contact-info h3 {
+            font-size: 14px; color: var(--primary); text-transform: uppercase;
+            letter-spacing: 3px; margin-bottom: 16px;
+        }
+        .contact-info h2 { font-size: 36px; color: var(--dark); margin-bottom: 20px; }
+        .contact-info > p { color: var(--text-light); margin-bottom: 40px; }
+        .contact-details { display: flex; flex-direction: column; gap: 24px; }
+        .contact-detail {
+            display: flex; align-items: flex-start; gap: 16px;
+        }
+        .contact-detail i {
+            width: 48px; height: 48px; background: rgba(26,82,118,0.08);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            color: var(--primary); font-size: 18px; flex-shrink: 0;
+        }
+        .contact-detail h4 { font-size: 16px; color: var(--dark); margin-bottom: 4px; }
+        .contact-detail p { font-size: 14px; color: var(--text-light); }
+        .contact-detail a { color: var(--primary); text-decoration: none; }
+        .contact-detail a:hover { text-decoration: underline; }
+        .contact-form {
+            background: var(--bg-light); padding: 40px;
+            border-radius: 20px;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 13px; font-weight: 600;
+            color: var(--dark); text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; padding: 14px 18px; border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 10px; font-size: 15px; font-family: 'Inter', sans-serif;
+            background: var(--white); transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none; border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26,82,118,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .contact-form button { width: 100%; justify-content: center; }
+
+        /* ===== MAP ===== */
+        .map-section iframe {
+            width: 100%; height: 400px; border: none; display: block;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark); color: var(--white); padding: 80px 0 0;
+        }
+        footer .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+        }
+        .footer-brand .logo-text h3 { color: var(--white); }
+        .footer-brand .logo-text span { color: rgba(255,255,255,0.6); }
+        .footer-brand > p { margin: 20px 0; color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.8; }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-size: 16px; transition: var(--transition);
+            text-decoration: none !important; border: none; outline: none;
+        }
+        .footer-social a:hover { background: var(--accent); color: var(--dark); }
+        .footer-col h4 {
+            font-size: 16px; color: var(--white); margin-bottom: 24px;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px;
+            transition: var(--transition);
+        }
+        .footer-col ul li a:hover { color: var(--accent); padding-left: 4px; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08); margin-top: 60px;
+            padding: 24px 0; display: flex; justify-content: space-between; align-items: center;
+        }
+        .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+        /* ===== STICKY CTA ===== */
+        .sticky-cta {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: var(--white); padding: 0;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            display: none; z-index: 999;
+        }
+        .sticky-cta .btn {
+            flex: 1; border-radius: 0; padding: 16px 0; font-size: 14px;
+            display: flex; justify-content: center; align-items: center; gap: 8px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .sticky-cta .btn-whatsapp { background: #25D366; color: var(--white); border: none; }
+        .sticky-cta .btn-call { background: var(--primary); color: var(--white); border: none; }
+
+        /* ===== SCROLL TOP ===== */
+        .scroll-top {
+            position: fixed; bottom: 80px; right: 24px;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--primary); color: var(--white);
+            border: none; cursor: pointer; font-size: 18px;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+            z-index: 998; box-shadow: var(--shadow);
+        }
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover { background: var(--accent); color: var(--dark); }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0; transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero p { margin: 0 auto 32px; }
+            .hero-buttons { justify-content: center; }
+            .hero-image { display: none; }
+            .about .container { grid-template-columns: 1fr; gap: 40px; }
+            .about-image { order: -1; }
+            .about-image-main { margin: 0 auto; }
+            .doctors-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            body { padding-bottom: 60px; }
+            .top-bar { display: none; }
+            nav { display: none; }
+            header .btn-primary { display: none; }
+            .mobile-menu { display: block; }
+            .trust-bar .container { grid-template-columns: repeat(2, 1fr); }
+            .trust-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.05); }
+            .doctors-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .testimonial-card { min-width: 100%; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 16px; padding-bottom: 60px; }
+            .sticky-cta { display: flex; }
+            .scroll-top { bottom: 80px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader"><div class="loader-ring"></div></div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <i class="fas fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a>
+                <span style="margin: 0 16px; opacity: 0.3">|</span>
+                <i class="fas fa-envelope"></i><a href="mailto:info@signaturedentistry.in">info@signaturedentistry.in</a>
+            </div>
+            <div>
+                <i class="fas fa-clock"></i>Mon - Sat: 9:00 AM - 7:00 PM
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Signature Dentistry Kochi Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: white;">
+                <div class="logo-text">
+                    <h3>Signature Dentistry</h3>
+                    <span>Kochi</span>
+                </div>
+            </a>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+            <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-award"></i> Kerala's Trusted Dental Experts</div>
+                <h1>Where <span>Precision</span> Meets <span>Compassion</span></h1>
+                <p>Experience premium dental care at Signature Dentistry Kochi. Led by Dr. Afeef Ansar (BDS, MDS), our team delivers painless, world-class treatments using cutting-edge digital technology.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+919876543210" class="btn btn-accent"><i class="fas fa-phone"></i> Call Now</a>
+                    <a href="https://maps.app.goo.gl/fSWLE4GiMDos2NFH8" target="_blank" class="btn btn-outline"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+                </div>
+                <div class="hero-rating">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <span><strong>4.9/5</strong> from 65+ Google Reviews</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-main"><i class="fas fa-tooth"></i></div>
+                <div class="hero-float-card card-1">
+                    <i class="fas fa-shield-alt"></i>
+                    <div><h4>Sterilised & Safe</h4><p>ISO-grade protocols</p></div>
+                </div>
+                <div class="hero-float-card card-2">
+                    <i class="fas fa-heart"></i>
+                    <div><h4>Pain-Free Promise</h4><p>Advanced anaesthesia</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-item">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>11+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-star"></i>
+                <h3>65+</h3>
+                <p>5-Star Reviews</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-user-md"></i>
+                <h3>3</h3>
+                <p>Expert Doctors</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>1</h3>
+                <p>Location in Kochi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-image">
+                <div class="about-image-main"><i class="fas fa-clinic-medical"></i></div>
+            </div>
+            <div class="about-content">
+                <h3>About Our Clinic</h3>
+                <h2>A Legacy of Excellence in Dental Care</h2>
+                <p>Signature Dentistry is a state-of-the-art digital dentistry centre in the heart of Kochi. Founded by Dr. Afeef Ansar, our clinic brings together a team of highly qualified specialists dedicated to transforming smiles with precision and compassion.</p>
+                <p>We believe every patient deserves specialist-level care. That's why our practice is built on the philosophy that only experts of each dental branch should attend to your needs — without compromise in treatment plans or objectives.</p>
+                <div class="about-features">
+                    <div class="about-feature"><i class="fas fa-check"></i><span>Digital & Minimally Invasive Procedures</span></div>
+                    <div class="about-feature"><i class="fas fa-check"></i><span>Specialist-Only Treatment Philosophy</span></div>
+                    <div class="about-feature"><i class="fas fa-check"></i><span>Child-Friendly, Anxiety-Free Environment</span></div>
+                    <div class="about-feature"><i class="fas fa-check"></i><span>Latest Equipment & Internationally Certified Materials</span></div>
+                </div>
+                <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors -->
+    <section class="doctors" id="doctors">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Meet Our Specialists</h2>
+                <p>Expert care from highly qualified dental professionals with decades of combined experience</p>
+                <div class="line"></div>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card fade-up">
+                    <div class="doctor-image">
+                        <img src="data:image/jpeg;base64,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" alt="Dr. Afeef Ansar">
+                        <div class="doctor-badge">Lead Doctor</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Afeef Ansar</h3>
+                        <div class="role">BDS, MDS — Endodontist</div>
+                        <p>Founder of Signature Dentistry with 11+ years of experience. Specialist in root canal treatments, conservative dentistry, and cosmetic smile makeovers.</p>
+                        <div class="doctor-meta">
+                            <span><i class="fas fa-star"></i> 4.9 Rating</span>
+                            <span><i class="fas fa-certificate"></i> MDS Certified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card fade-up">
+                    <div class="doctor-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhJUSUbavL4eZR8rcWphniDAC4gyDaDurzlg&s" alt="Dr. Azmin">
+                        <div class="doctor-badge">Associate</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Azmin</h3>
+                        <div class="role">Dental Surgeon</div>
+                        <p>Known for her gentle touch and seamless procedures. Patients love her welcoming nature and ability to make every visit completely comfortable.</p>
+                        <div class="doctor-meta">
+                            <span><i class="fas fa-heart"></i> Patient Favourite</span>
+                            <span><i class="fas fa-award"></i> Specialist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="doctor-card fade-up">
+                    <div class="doctor-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT22uQQiHuUVAElvJv0-XRoh1M56tIeoSDc4Q&s" alt="Dr. Hafif">
+                        <div class="doctor-badge">Associate</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Hafif</h3>
+                        <div class="role">Dental Surgeon</div>
+                        <p>Expert in preventive and general dentistry. Highly praised for professional plaque removal, cleanings, and detailed patient education.</p>
+                        <div class="doctor-meta">
+                            <span><i class="fas fa-star"></i> Top Rated</span>
+                            <span><i class="fas fa-user-check"></i> Trusted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Premium Services</h2>
+                <p>Comprehensive dental solutions using the latest technology and techniques</p>
+                <div class="line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <i class="fas fa-teeth"></i>
+                    <h3>Invisible Aligners</h3>
+                    <p>Straighten your teeth discreetly with our advanced clear aligner treatments. Perfect for adults and teens who want a confident smile without braces.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <i class="fas fa-teeth-open"></i>
+                    <h3>Root Canal Treatment</h3>
+                    <p>Pain-free root canal therapy using modern endodontic techniques. Save your natural tooth with our precise, comfortable procedures.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <i class="fas fa-gem"></i>
+                    <h3>Crowns & Veneers</h3>
+                    <p>Custom ceramic crowns and porcelain veneers designed to restore and enhance your smile. Natural-looking, durable, and perfectly matched.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <i class="fas fa-magic"></i>
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>From teeth whitening to complete smile makeovers. Transform your appearance with our aesthetic dental solutions tailored to your face.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Laser Dentistry</h3>
+                    <p>Experience precise, minimally invasive dental care with advanced laser technology. Ideal for painless gum treatments, teeth whitening, and faster healing.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <i class="fas fa-child"></i>
+                    <h3>Pediatric Dentistry</h3>
+                    <p>Child-friendly dental care in a warm, welcoming environment. Our team specializes in making children feel completely at ease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="why-choose" id="why-us">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Why Choose Signature Dentistry?</h2>
+                <p>What makes us the preferred dental care destination in Kochi</p>
+                <div class="line"></div>
+            </div>
+            <div class="why-grid">
+                <div class="why-item fade-up">
+                    <i class="fas fa-user-shield"></i>
+                    <div>
+                        <h3>Pain-Free Promise</h3>
+                        <p>Advanced anaesthesia and gentle techniques ensure every procedure is as comfortable as possible. Patients consistently mention "zero pain."</p>
+                    </div>
+                </div>
+                <div class="why-item fade-up">
+                    <i class="fas fa-microscope"></i>
+                    <div>
+                        <h3>Digital Dentistry</h3>
+                        <p>State-of-the-art digital imaging, CAD/CAM technology, and computerised patient tracking for precision-driven treatments.</p>
+                    </div>
+                </div>
+                <div class="why-item fade-up">
+                    <i class="fas fa-user-md"></i>
+                    <div>
+                        <h3>Specialist-Only Care</h3>
+                        <p>Unlike general clinics, every treatment here is handled by a specialist in that field. No compromises — only expert care.</p>
+                    </div>
+                </div>
+                <div class="why-item fade-up">
+                    <i class="fas fa-shield-virus"></i>
+                    <div>
+                        <h3>Hospital-Grade Sterilisation</h3>
+                        <p>Rigorous sterilisation protocols and spotlessly clean facilities. Your safety is our absolute priority at every step.</p>
+                    </div>
+                </div>
+                <div class="why-item fade-up">
+                    <i class="fas fa-comments"></i>
+                    <div>
+                        <h3>Transparent Communication</h3>
+                        <p>We explain every procedure using digital images and clear language. No surprises — you stay informed and in control.</p>
+                    </div>
+                </div>
+                <div class="why-item fade-up">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>On-Time Appointments</h3>
+                        <p>We value your time. Our streamlined scheduling ensures minimal waiting with personalised appointment reminders.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Clinic Tour</h2>
+                <p>Take a look inside our state-of-the-art facility</p>
+                <div class="line"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="assets/gallery1.jpg" alt="Clinic Interior"></div>
+                <div class="gallery-item"><img src="assets/gallery2.jpg" alt="Clinic Exterior"></div>
+                <div class="gallery-item"><img src="assets/gallery3.jpg" alt="Dental Team"></div>
+                <div class="gallery-item"><img src="assets/gallery4.jpg" alt="Clinic Tour"></div>
+                <div class="gallery-item"><img src="assets/gallery5.jpg" alt="Treatment Room"></div>
+                <div class="gallery-item"><img src="assets/gallery6.jpg" alt="Waiting Area"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-heading">
+                <h2 style="color: var(--white);">What Our Patients Say</h2>
+                <p style="color: rgba(255,255,255,0.7);">Real stories from real patients who trusted us with their smiles</p>
+                <div class="line" style="background: var(--accent);"></div>
+            </div>
+            <div class="testimonial-carousel">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Review 1: Sarah Mathew -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"I had struggled a lot in pain after I did my root canal in Bangalore. Came to know of Dr. Afeef through my nephew & it's wonderful — he did 2 of my teeth full root canal. To be true, I NEVER had to go through pain."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">S</div>
+                            <div><h4>Sarah Mathew</h4><span>Root Canal Patient</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 2: Elizabeth Slosiarek -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"My family recently relocated to Kochi from the US. I discovered Dr. Afeef's practice using Google — his reviews were excellent. I was very pleased with my experience. The team made our day."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">E</div>
+                            <div><h4>Elizabeth Slosiarek</h4><span>Family Dental Care</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 3: Usha Jayaprakash -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"A big thank you to Dr. Afeef. I had an excellent experience at Signature Dentistry. A very neatly kept place with very polite staff. Had gone there with a large cavity — the treatment was outstanding."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">U</div>
+                            <div><h4>Usha Jayaprakash</h4><span>Cavity Treatment</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 4: Kartika Pillai -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"I had a really good experience with my aligner treatment. I'm usually very anxious about dental visits, but Dr. Afeef explained everything patiently and made me feel comfortable throughout the process."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">K</div>
+                            <div><h4>Kartika Pillai</h4><span>Invisible Aligners</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 5: Blessy Thomas -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"I underwent my aligner treatment at Dr. Afeef's Signature Dentistry, and the experience was exceptional from the first consultation to the final stage. The level of care and professionalism was outstanding."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">B</div>
+                            <div><h4>Blessy Thomas</h4><span>Aligner Treatment</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 6: George Thomas -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Excellent experience at this clinic! Everything was perfect and well organized, there was no delay in appointments. Dr. Azmin was amazing and made sure the procedure was seamlessly comfortable."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">G</div>
+                            <div><h4>George Thomas</h4><span>General Dentistry</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 7: Legend Man -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"A very intelligent and wise doctor. No dentist has ever explained to me properly about my teeth and the procedures involved. He values patient care above everything else. Thank you, Dr. Afeef."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">L</div>
+                            <div><h4>Legend Man</h4><span>Dental Consultation</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 8: Ashfan -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Dr. Afeef and his team have done an exceptionally great job with my invisible aligner treatment. They performed the entire treatment with utmost care and diligence. Definitely recommend this clinic."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">A</div>
+                            <div><h4>Ashfan</h4><span>Invisible Aligners</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 9: Namitha Abdul Azeez -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"I had a great experience at Signature Dentistry. The clinic is very well-maintained with excellent sanitisation. The staff is polite, professional, and welcoming. The doctor is extremely reassuring."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">N</div>
+                            <div><h4>Namitha Abdul Azeez</h4><span>General Treatment</span></div>
+                        </div>
+                    </div>
+                    <!-- Review 10: Amjitha Sheffin -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"I had a wonderful experience at Signature Dental Clinic. The doctor was very friendly and explained everything clearly before starting. The clinic was clean, well-maintained, and used modern equipment."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-avatar">A</div>
+                            <div><h4>Amjitha Sheffin</h4><span>General Treatment</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-nav">
+                <button onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots" id="testimonialDots"></div>
+                <button onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our dental services</p>
+                <div class="line"></div>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Is root canal treatment painful at Signature Dentistry?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not at all. We use advanced anaesthesia and modern endodontic techniques to ensure a completely pain-free experience. Our patients consistently describe their root canal treatments with us as surprisingly comfortable — many say they felt no pain at all.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How long does invisible aligner treatment take?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Treatment duration varies based on individual needs, but most aligner treatments at Signature Dentistry take between 6 to 18 months. During your consultation, Dr. Afeef will explain your personalised treatment timeline using digital imaging.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do you offer dental care for children?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we specialise in pediatric dentistry. Our clinic is designed to be child-friendly, and our team is trained to make children feel completely at ease. We've successfully treated children as young as 8 years old with excellent feedback from parents.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What safety and sterilisation measures do you follow?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We follow hospital-grade sterilisation protocols with autoclaving of all instruments, disposable materials where possible, and thorough surface disinfection between patients. Our clinic maintains the highest standards of hygiene and cleanliness.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How do I book an appointment?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can book an appointment by calling us, sending a WhatsApp message, or filling out the contact form on our website. We offer flexible scheduling including time-based appointments designed to be patient-centric with minimal waiting time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What are your consultation fees?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our consultation fee is ₹300. During your first visit, we conduct a thorough examination, explain your dental condition using digital images, and create a personalised treatment plan. We believe in transparent pricing with no hidden costs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <h2>Book Your Appointment Today</h2>
+                    <p>Take the first step towards a healthier, more beautiful smile. Our team is ready to welcome you.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Signature Dentistry — Kaloor</h4>
+                                <p>1st Floor, Sarovar Plaza, Stadium Link Road<br>Opposite Skyline Legend Apartment, Kaloor, Kochi</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@signaturedentistry.in">info@signaturedentistry.in</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="appointmentForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="Your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Your email address">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Service</label>
+                            <select required>
+                                <option value="">Choose a service</option>
+                                <option value="aligners">Invisible Aligners</option>
+                                <option value="root-canal">Root Canal Treatment</option>
+                                <option value="crowns">Crowns & Veneers</option>
+                                <option value="cleaning">Teeth Cleaning</option>
+                                <option value="cosmetic">Cosmetic Dentistry</option>
+                                <option value="pediatric">Pediatric Dentistry</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message (Optional)</label>
+                            <textarea placeholder="Tell us about your concern..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Request Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7!2d76.298!3d10.015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d70a9e1c3a7%3A0x7c0e0a0c0c0c0c0c!2sSignature%20Dentistry%2C%20Sarovar%20Plaza%2C%20Kaloor!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipPgG5U-uSXGl8-OZncAisAWkC3udtcv0_0nGAMD=w203-h213-k-no" alt="Signature Dentistry Kochi Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 8px;">
+                        <div class="logo-text">
+                            <h3>Signature Dentistry</h3>
+                            <span>Kochi</span>
+                        </div>
+                    </a>
+                    <p>Premium dental care led by Dr. Afeef Ansar. We combine advanced technology with compassionate care to deliver exceptional results for every patient who walks through our doors.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#doctors">Our Doctors</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Invisible Aligners</a></li>
+                        <li><a href="#services">Root Canal Treatment</a></li>
+                        <li><a href="#services">Crowns & Veneers</a></li>
+                        <li><a href="#services">Cosmetic Dentistry</a></li>
+                        <li><a href="#services">Laser Dentistry</a></li>
+                        <li><a href="#services">Pediatric Dentistry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li><a href="mailto:info@signaturedentistry.in">info@signaturedentistry.in</a></li>
+                        <li style="line-height: 1.6;"><a href="https://maps.app.goo.gl/fSWLE4GiMDos2NFH8" target="_blank">1ST FLOOR, SAROVAR PLAZA, Stadium Link Rd, opp. SKYLINE LEGEND APARTMENT, Kathrikadavu, Kaloor, Kochi, Ernakulam, Kerala 682025</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Signature Dentistry Kochi. All rights reserved.</p>
+                <p>Designed & Developed by <strong>Nexora Systems</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="https://wa.me/919876543210" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="tel:+919876543210" class="btn btn-call"><i class="fas fa-phone"></i> Call Now</a>
+    </div>
+
+    <!-- Scroll Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 600);
+        });
+
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll top
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Fade up animation
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Testimonial Carousel
+        let currentSlide = 0;
+        const track = document.getElementById('testimonialTrack');
+        const cards = track.querySelectorAll('.testimonial-card');
+        const dotsContainer = document.getElementById('testimonialDots');
+        const slidesPerView = window.innerWidth > 768 ? 2 : 1;
+        const totalSlides = Math.ceil(cards.length / slidesPerView);
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        function updateCarousel() {
+            const cardWidth = cards[0].offsetWidth + 24;
+            track.style.transform = `translateX(-${currentSlide * cardWidth * slidesPerView}px)`;
+            dotsContainer.querySelectorAll('.testimonial-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function moveSlide(dir) {
+            currentSlide = (currentSlide + dir + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        setInterval(() => moveSlide(1), 5000);
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        }
+
+        // Form Submit
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i> Appointment Requested!';
+                btn.style.background = 'var(--success)';
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.style.background = '';
+                }, 3000);
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
